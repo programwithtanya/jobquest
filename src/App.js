@@ -1,21 +1,17 @@
-  import { useState } from 'react';
 import './App.css';
-import Hero from './component/Hero';
+import LoginPage from './component/LoginPage';
 import Navbar from './component/Navbar';
-import UserLogin from './component/LoginPage/UserLogin'
+import { BrowserRouter, Route , Routes } from 'react-router-dom';
+
 function App() {
-  const [display , setDisplay] = useState('home');
   return (
-    <>
-      {display === 'login' ? (
-        <UserLogin />
-      ) : (
-        <>
-          <Navbar setDisplay={setDisplay} />
-          <Hero />
-        </>
-      )}
-    </>
+  <BrowserRouter>
+  <Navbar/>
+  <Routes>
+    <Route path='/loginpage' element={<LoginPage/>}></Route>
+
+  </Routes>
+  </BrowserRouter>
   );
 }
 
