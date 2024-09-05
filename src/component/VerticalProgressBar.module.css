@@ -1,0 +1,64 @@
+.container {
+    position: relative;
+    height: 80vh;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #03346E;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid white;
+    position: relative;
+    left: 15%;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.circle h1 {
+    color: whitesmoke;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.circle::after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 23px; 
+    background-color: white;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: background-color 0.3s;
+}
+
+.container > span:last-child .circle::after {
+    display: none;
+}
+
+.container span {
+    display: flex;  
+    align-items: center;
+}
+
+.information {
+    position: relative;
+    left: 75px;
+    font-size: 20px;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+.circle.active {
+    background-color:whitesmoke;
+}
+.circle.active h1{
+    color: black;
+}

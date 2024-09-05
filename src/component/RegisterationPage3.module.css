@@ -1,0 +1,107 @@
+.container {
+  position: relative;
+  height: 80vh;
+  box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.2), 6px 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem; 
+}
+.form {
+  margin-top: 50px;
+}
+.wrap {
+  width: 90%;
+  margin: 40px 3%;
+  position: relative;
+  display: flex; 
+  align-items: center;
+}
+.label {
+  width: 150px;
+  text-align: right; 
+  margin-right: 10px;
+}
+.input {
+  width: calc(100% - 160px); 
+  box-sizing: border-box;
+  letter-spacing: 1px;
+  background-color: #f5f6fd;
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #ccc;
+}
+.input:focus {
+  outline: none;
+}
+.focusBorder {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #6c5dd3;
+  transition: 0.4s;
+}
+.input:focus ~ .focusBorder {
+  width: calc(100% - 160px); 
+  left: 160px;
+  transition: 0.4s;
+}
+.btn {
+  align-items: center;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 35px;
+  justify-content: center;
+  line-height: 1;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  font-size: 1rem; 
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.btn2 {
+  align-items: center;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 35px;
+  justify-content: center;
+  line-height: 1;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  font-size: 1rem;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+.btn:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+.btn:hover {
+  box-shadow: rgba(45, 35, 66, 0.1) 0 4px 8px, rgba(45, 35, 66, 0.10) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+.btn:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
