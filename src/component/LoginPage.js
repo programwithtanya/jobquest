@@ -3,6 +3,7 @@ import formLogo from "../images/girlGreeting.jpg";
 import carousel1 from "../images/jobQuest.jpeg";
 import carousel2 from "../images/company.jpeg";
 import carousel3 from "../images/deliveryBoy.jpeg";
+import { Link } from 'react-router-dom';
 
 const images = [
   {
@@ -161,10 +162,11 @@ const LoginPage = () => {
           </button>
         </div>
 
-        {/* Register Link */}
+        
         <p className="mt-6 md:mt-8 text-gray-600 text-xs md:text-base text-center w-full font-varela">
-          Don’t have an account yet? <a href="#" className="text-blue-500 hover:underline font-varela">Register now</a>
+          Don’t have an account yet? <Link to="/registerationForm" className="text-blue-500 hover:underline font-varela">Register now</Link>
         </p>
+
       </div>
     </div>
   );
